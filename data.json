@@ -1,0 +1,36 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Crumbs Bread Factory",
+      "image": "/assets/Crumbs.jpg",
+      "description": "Best place to eat homemade bread and pastries",
+      "rating": 5,
+      "geometry": [40.1811011, 44.5149545]
+    },
+    {
+      "id": 2,
+      "name": "Gouroo Club & Garden",
+      "image": "/assets/Gouroo.jpg",
+      "description": "Best breakfast spot with a beautiful garden",
+      "rating": 5,
+      "geometry": [40.1843042, 44.5163107]
+    },
+    {
+      "id": 3,
+      "name": "Eat & Fit",
+      "image": "/assets/EatFit.jpg",
+      "description": "Best vegan and vegetarian breakfast in Yerevan",
+      "rating": 3,
+      "geometry": [40.18169475, 44.52650165]
+    },
+    {
+      "id": 4,
+      "name": "Wine Republic",
+      "image": "/assets/WineRepublic.jpg",
+      "description": "Best restaurant for amazing wine and food pairings",
+      "rating": 4,
+      "geometry": [40.1883788, 44.5138622]
+    }
+  ]
+}
