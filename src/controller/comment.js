@@ -3,17 +3,19 @@ const RestaurantModel = require("../model/restaurant");
 const mongoose = require("mongoose");
 const CommentController = {
   async saveComments(req, res, next) {
-    const { author, text, restaurantId } = req.body;
+    const { author, commentText, restaurantId } = req.body;
     const newComment = new CommentModel({
       name: author,
-      commentText: text,
+      commentText: commentText,
     });
     const { _id } = await newComment.save();
     let restaurant = await RestaurantModel.findById(
       mongoose.Types.ObjectId(restaurantId)
     );
-    restaurant.comments.push(_id);
-    await restaurant.save();
+    if (restaurant) {
+      restaurant.comments.push(_id);
+      await restaurant.save();
+    }
     return res.json({
       error: false,
       message: "Comment inserted successfully!",

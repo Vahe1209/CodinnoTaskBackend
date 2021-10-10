@@ -23,7 +23,11 @@ const RestaurantModel = require("./model/restaurant");
 //   });
 //   await restaurant.save();
 // });
-app.use(cors);
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(express.json());
 app.get("/getRestaurants", RestaurantController.getRestaurants);
 app.post("/setComment", CommentController.saveComments);
